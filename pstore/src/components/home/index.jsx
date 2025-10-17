@@ -64,7 +64,7 @@ function Home() {
       {/* Encabezado */}
       <div className="menu">
         <img
-          src="/src/assets/Logo-platzi.png"
+          src="/public/Logo-platzi.png"
           alt="Logo"
           style={{ height: "40px", verticalAlign: "middle", marginRight: "10px" }}
         />

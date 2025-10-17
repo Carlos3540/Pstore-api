@@ -32,7 +32,7 @@ function App() {
             <span className="texto">Favoritos</span>
           </Link>
           <Link to="/informativa" className="menu-item">
-            <span className="icono"></span>
+            <span className="icono">ℹ</span>
             <span className="texto">Info</span>
           </Link>
           <Link to="/original" className="menu-item">

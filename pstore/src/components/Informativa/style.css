@@ -1,0 +1,91 @@
+.informativa-container {
+  padding-bottom: 80px; /* espacio para menú inferior */
+  background: #0a192f;
+  color: #e6f1ff;
+  text-align: center;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.informativa-container h1 {
+  font-size: 1.8rem;
+  color: #00b4d8;
+  margin-top: 1rem;
+}
+
+.informativa-container p {
+  color: #cfd8dc;
+  font-size: 0.95rem;
+  margin: 1rem 1.5rem;
+}
+
+/* 🔹 Cuadrícula de categorías */
+.categoria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 15px;
+  padding: 1rem;
+}
+
+.categoria-card {
+  background: #1b263b;
+  border-radius: 10px;
+  padding: 0.8rem;
+  transition: transform 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 180, 216, 0.15);
+}
+
+.categoria-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 5px 12px rgba(0, 180, 216, 0.25);
+}
+
+.categoria-card img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #0d1b2a;
+}
+
+.categoria-card h3 {
+  font-size: 0.9rem;
+  color: #90e0ef;
+  margin: 0.4rem 0 0.2rem;
+}
+
+.categoria-card p {
+  font-size: 0.8rem;
+  color: #adb5bd;
+}
+
+/* 🔹 Menú inferior fijo */
+.menu-inferior {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #142750;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0;
+  border-top: 2px solid #00b4d8;
+}
+
+.menu-inferior button {
+  background: none;
+  border: none;
+  color: #e0e1dd;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu-inferior button:hover {
+  color: #00b4d8;
+}
+
+.menu-inferior .activo {
+  color: #00b4d8;
+  font-weight: bold;
+}

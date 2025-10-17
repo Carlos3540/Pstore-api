@@ -1,0 +1,79 @@
+/* 🔹 Contenedor general */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 70px; /* espacio para el menú inferior */
+  background: radial-gradient(circle at top, #0b0c10 10%, #1f2833);
+}
+
+/* 🔹 Menú inferior */
+.menu-inferior {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 65px;
+  background: rgba(15, 20, 25, 0.9);
+  border-top: 2px solid #45a29e;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+/* 🔹 Enlaces del menú */
+.menu-item {
+  color: #c5c6c7;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.menu-item .icono {
+  font-size: 1.5rem;
+}
+
+.menu-item:hover,
+.menu-item:focus {
+  color: #66fcf1;
+  transform: translateY(-4px);
+}
+
+/* 🔹 Estado activo */
+.menu-item.active {
+  color: #66fcf1;
+  font-weight: bold;
+}
+
+/* 🔹 Responsivo para escritorio */
+@media (min-width: 768px) {
+  .menu-inferior {
+    height: 70px;
+    justify-content: center;
+    gap: 60px;
+  }
+
+  .menu-item {
+    font-size: 1rem;
+  }
+
+  .menu-item .icono {
+    font-size: 1.7rem;
+  }
+}
+
+/* 🔹 Responsivo para móvil */
+@media (max-width: 480px) {
+  .menu-item .texto {
+    font-size: 0.7rem;
+  }
+  .menu-item .icono {
+    font-size: 1.4rem;
+  }
+}

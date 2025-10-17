@@ -1,0 +1,220 @@
+/* ===============================
+   🎨 Estilos generales del Home
+   =============================== */
+.home-container {
+  font-family: "Poppins", Arial, sans-serif;
+  padding: 1rem;
+  text-align: center;
+  color: #c5c6c7;
+  background: linear-gradient(180deg, #0b0c10, #1f2833);
+  min-height: 100vh;
+}
+
+/* 🔹 Encabezado */
+.menu {
+  background: rgba(31, 40, 51, 0.9);
+  color: #66fcf1;
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  box-shadow: 0 0 10px rgba(102, 252, 241, 0.2);
+}
+
+/* ===============================
+   🔍 Buscador y filtro
+   =============================== */
+.buscador input {
+  padding: 10px;
+  width: 80%;
+  border-radius: 10px;
+  border: 1px solid #45a29e;
+  background: #1f2833;
+  color: #c5c6c7;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.buscador input:focus {
+  border-color: #66fcf1;
+  box-shadow: 0 0 6px #66fcf1;
+}
+
+.filtro select {
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 10px;
+  border: 1px solid #45a29e;
+  background: #1f2833;
+  color: #c5c6c7;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.filtro select:hover,
+.filtro select:focus {
+  border-color: #66fcf1;
+}
+
+/* ===============================
+   🪐 Lista de productos
+   =============================== */
+.lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 20px;
+  list-style: none;
+  margin-top: 1.5rem;
+  padding: 0;
+}
+
+.lista li {
+  background: rgba(31, 40, 51, 0.9);
+  border-radius: 14px;
+  padding: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  position: relative;
+  box-shadow: 0 0 10px rgba(102, 252, 241, 0.1);
+}
+
+.lista li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(102, 252, 241, 0.4);
+}
+
+/* 🔹 Imagen de producto */
+.miniatura {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #45a29e;
+}
+
+/* 🔹 Info del producto */
+.info {
+  margin-top: 8px;
+}
+
+.info h4 {
+  color: #ffffff;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.info p {
+  color: #66fcf1;
+  font-weight: bold;
+}
+
+/* ===============================
+   ⭐ Botón de favoritos
+   =============================== */
+.btn-fav {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #c5c6c7;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.btn-fav:hover {
+  transform: scale(1.2);
+  color: #66fcf1;
+}
+
+/* ===============================
+   📦 Detalle del producto
+   =============================== */
+.detalle {
+  background: rgba(11, 12, 16, 0.95);
+  border: 2px solid #45a29e;
+  border-radius: 16px;
+  padding: 25px;
+  margin-top: 2rem;
+  box-shadow: 0 0 20px rgba(102, 252, 241, 0.4);
+  animation: fadeIn 0.5s ease;
+}
+
+.detalle img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #45a29e;
+  margin-bottom: 1rem;
+}
+
+.detalle h3 {
+  color: #66fcf1;
+}
+
+.detalle p {
+  color: #c5c6c7;
+  margin: 5px 0;
+}
+
+.detalle button {
+  background: #66fcf1;
+  border: none;
+  padding: 10px 20px;
+  color: #0b0c10;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.detalle button:hover {
+  background: #45a29e;
+  color: #fff;
+}
+
+/* ===============================
+   ⏳ Estado de carga
+   =============================== */
+.cargando {
+  color: #66fcf1;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+/* ===============================
+   ✨ Animaciones
+   =============================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ===============================
+   📱 Responsivo
+   =============================== */
+@media (max-width: 600px) {
+  .buscador input {
+    width: 90%;
+  }
+
+  .miniatura {
+    height: 140px;
+  }
+
+  .detalle img {
+    width: 200px;
+    height: 200px;
+  }
+}

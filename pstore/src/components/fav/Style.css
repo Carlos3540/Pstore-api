@@ -1,0 +1,40 @@
+.favoritos {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  padding: 20px;
+  color: #fff;
+  background: linear-gradient(180deg, #0d1b2a, #1b263b);
+  min-height: 100vh;
+}
+
+.favoritos h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.lista-fav {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  padding: 0;
+}
+
+.lista-fav li {
+  background: #142750;
+  border-radius: 12px;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.lista-fav li:hover {
+  transform: scale(1.03);
+  background: #1e3a8a;
+}
+
+.miniatura-fav {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+}
